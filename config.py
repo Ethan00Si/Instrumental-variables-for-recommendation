@@ -53,7 +53,7 @@ class DIN_Config():
 
 class IV_DIN_mlp_Config():
     def __init__(self):
-        self.learning_rate = 1e-5
+        self.learning_rate = 3e-5
         self.epochs = 25
         self.interval = 1000 
         self.save_epochs = 0
@@ -61,12 +61,12 @@ class IV_DIN_mlp_Config():
         self.device = 'cpu'
         self.train_batch_size = train_batch_size
         self.test_batch_size = test_batch_size
-        self.l2_lambda = 1e-6
+        self.l2_lambda = 1e-8
         self.phi = {'hidden_dims':[768,768,768],
                 'dropout':[0.1,0.1],
                 'is_dropout':True
         }
-        self.alpha = {'hidden_dims':[768*2,512,128,32,1],
+        self.alpha = {'hidden_dims':[768*2, 512, 128, 32, 1],
             'dropout':[],'is_dropout':False
         }
         self.beta = self.alpha
